@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contect %}
+<div class="card" style="width: 18rem;">
+  {% for postings in postings %}
+  <img src="{{ postings.image.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <small>{{postings.date}}</small>
+    <h5 class="card-title">{{ postings.judul }}</h5>
+    <p class="card-text">{{ postings.konten }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
